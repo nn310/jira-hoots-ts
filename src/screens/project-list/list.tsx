@@ -1,4 +1,17 @@
-export const List=({list,users})=>{
+import {User} from 'screens/project-list/search-panel'
+interface Project {
+    id:string,
+    name:string,
+    personId:string,
+    pin:string,
+    organization:string
+}
+
+interface ListProps {
+    list:Project[],
+    users:User[]
+}
+export const List=({list,users}:ListProps)=>{
     return <table>
         <thead>
             <tr>
@@ -8,12 +21,12 @@ export const List=({list,users})=>{
         </thead>
         <tbody>
             {
-                list.map((project)=>(
-                    <tr key={project.id}>
+                list.map((project)=>
+                    <tr key={project.name}>
                         <td>{project.name}</td>
                         <td>{users.find(user=>user.id===project.personId)?.name || '未知'}</td>
                     </tr>
-                ))
+                )
             }
         </tbody>
     </table>

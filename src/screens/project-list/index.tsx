@@ -20,6 +20,7 @@ export const ProjectListScreen = () => {
         setList(await response.json());
       }
     });
+    
   }, [debouncedParam]);
 
   useMount(() => {
@@ -32,7 +33,7 @@ export const ProjectListScreen = () => {
   });
   return (
     <div>
-      <SearchPanel param={param} setParam={setParam} users={users} />
+      <SearchPanel users={users} param={param} setParam={setParam} />
       <List list={list} users={users} />
     </div>
   );
