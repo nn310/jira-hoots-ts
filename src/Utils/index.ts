@@ -18,7 +18,7 @@ export const cleanObject = (object:object) =>{
 // 组件挂载后调用
 export const useMount=(callback:()=>void)=>{
     useEffect(() => {
-      callback()1
+      callback()
     }, [])
   }
   // 和去抖方法实现差不多
