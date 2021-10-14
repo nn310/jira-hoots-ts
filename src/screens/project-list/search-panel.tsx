@@ -5,7 +5,8 @@ export interface User {
     name:string,
     email:string,
     title:string,
-    organization:string
+    organization:string,
+    token:string
 }
 
 interface SearchPanelProps{//定义变量，说明使用类型
