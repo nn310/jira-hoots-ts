@@ -45,5 +45,8 @@
     "@types/qs": "^6.9.7",
     "@types/react": "^17.0.29",
     "prettier": "2.4.1"
+  },
+  "msw": {
+    "workerDirectory": "public"
   }
 }
