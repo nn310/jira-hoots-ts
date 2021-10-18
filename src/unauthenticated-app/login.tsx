@@ -1,6 +1,7 @@
 import { FormEvent } from 'react';
 import { Form ,Input ,Button} from 'antd';
 import { useAuth } from 'context/auth-context';
+import { LongButton } from 'unauthenticated-app';
 const apiUrl = process.env.REACT_APP_API_URL;
 function Login() {
 
@@ -19,7 +20,7 @@ function Login() {
           <Input placeholder={'密码'} type="password" id={'password'} />
         </Form.Item>  
         <Form.Item >
-          <Button htmlType={'submit'} type={'primary'}>登录</Button>
+          <LongButton htmlType={'submit'} type={'primary'}>登录</LongButton>
         </Form.Item>
     </Form>
 
